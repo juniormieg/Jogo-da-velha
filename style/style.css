@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+.dark-mode {
+  background-color: #333;
+  color: rgb(248, 221, 189);
+  display: grid;
+  transition: background-color 0.5s ease;
+}
+body {
+  background-color: #b9a785;
+  display: grid;
+  transition: background-color 0.5s ease;
+}
+.cabecalho {
+  background-color: #474343;
+  display: flex;
+  height: 3rem;
+  color: #b4afaf;
+  font-size: 1rem;
+  justify-content: space-between;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.btn-dark-mode {
+  margin-top: 0.5rem;
+  background-color: rgb(31, 29, 29);
+  border: none;
+  border-radius: 2rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.btn-dark-mode:hover {
+  background-color: rgb(136, 125, 125);
+}
+.btn-ligth-mode {
+  margin-top: 0.5rem;
+  background-color: #b9a785;
+  border: none;
+  border-radius: 2rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.jogo {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  justify-content: center;
+}
+.btn-game {
+  padding: 3rem;
+  width: 1rem;
+  text-align: center;
+  background-color: #8b7676;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.btn-game:hover {
+  background-color: #685a5a;
+}
+.nav-bar {
+  display: flex;
+  justify-content: center;
+}
+.secao-do-jogador {
+  display: grid;
+  justify-content: center;
+}
+
+.player {
+  font-size: 1.5rem;
+}
+.contadorX {
+  font-size: 1.5rem;
+}
+.contadorY {
+  font-size: 1.5rem;
+}
+.empate {
+  font-size: 1.5rem;
+}
