@@ -25,6 +25,7 @@ body {
   padding-left: 1rem;
 }
 .btn-dark-mode {
+  padding-bottom: 0.5px;
   margin-top: 0.5rem;
   background-color: rgb(31, 29, 29);
   border: none;
