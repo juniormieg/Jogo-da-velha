@@ -6,13 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogo da veia</title>
   <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="style/modal.css">
 </head>
 
 <body class="body">
+
   <div class="cabecalho">
     <h1>Jogo Da velha</h1>
     <button class="btn-dark-mode">🌕</button>
   </div>
+
   <div class="jogo">
     <button data-i="1" class="btn-game btn-1"></button>
     <button data-i="2" class="btn-game btn-2"></button>
@@ -24,12 +27,22 @@
     <button data-i="8" class="btn-game btn-8"></button>
     <button data-i="9" class="btn-game btn-9"></button>
   </div>
+
   <div class="secao-do-jogador">
     <h1 class="player"></h1>
     <h1 class="contadorX"></h1>
     <h1 class="contadorY"></h1>
     <h1 class="empate"></h1>
   </div>
+
+  <div class="modal" id="tela-de-vitoria">
+    <div class="conteudo-do-modal">
+      <h2>Vítoria!!!</h2>
+      <p class="jogador-vencedor"></p>
+      <button class="btn-modal" onclick="fecharModal()">Fechar</button>
+    </div>
+  </div>
+
   <script src="/script/game-rule.js"></script>
   <script src="script/dark-mode.js"></script>
 </body>

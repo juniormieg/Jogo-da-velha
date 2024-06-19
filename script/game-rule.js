@@ -45,6 +45,25 @@ function newMove(e) {
   player = player === "X" ? "O" : "X";
   currentPlayer.innerHTML = `turno do: ${player}`;
 }
+function exibeModalVitoria(vencedor) {
+  const modal = document.getElementById("tela-de-vitoria");
+  const mensagem = `o jogador ${vencedor} venceu!`;
+
+  modal.querySelector("p").textContent = mensagem;
+  modal.style.display = "block";
+}
+function exibeModalEmpate() {
+  const modal = document.getElementById("tela-de-vitoria");
+  const mensagem = `Foi um Empate!!`;
+
+  modal.querySelector("p").textContent = mensagem;
+  modal.style.display = "block";
+}
+
+function fecharModal() {
+  const modal = document.getElementById("tela-de-vitoria");
+  modal.style.display = "none";
+}
 
 function check() {
   let playerLastMove = player === "X" ? "O" : "X";
@@ -56,7 +75,7 @@ function check() {
 
   for (pos of positions) {
     if (pos.every((item) => items.includes(item))) {
-      alert("o vencedor foi o jogador:" + " " + playerLastMove);
+      exibeModalVitoria(playerLastMove);
       if (playerLastMove === "X") {
         vencedorX++;
         contadorX.textContent = "Rodadas vencidas por X: " + vencedorX;
@@ -71,7 +90,7 @@ function check() {
   }
 
   if (selected.filter((item) => item).length === 9) {
-    alert("deu empate!");
+    exibeModalEmpate();
     empate++;
     contadorEmpate.textContent = "Empates: " + empate;
     init();
